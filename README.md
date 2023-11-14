@@ -25,9 +25,12 @@ cd lorcana
 
 # Usage 
 
-- The only funtionality at the moment is grabbing the pngs for all the cards in the game and saving them into a local folder. You can do that just by running the main script in the root of this directory
+```bash
+python getData
+``` 
+- This retrieves all the card data from lorcania.com
 
 ```bash
-python main.py
-```
-This currently runs all the scripts in the src folder and grabs all current card images for the game. 
+python getData
+``` 
+- This saves all the images specified in the data.csv to a local folder

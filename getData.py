@@ -26,20 +26,20 @@ for card_id in range(1, 449):
         data_json = json.loads(data_page)
 
         # Extract card information
-        card_info = data_json['props']['card']
+        data_draft = data_json['props']['card']
 
         # Define headers for CSV file
         if card_id == 1:  # Write headers only for the first card
-            headers = list(card_info.keys())
-            with open('card_info.csv', mode='w', newline='', encoding='utf-8') as file:
+            headers = list(data_draft.keys())
+            with open('data_draft.csv', mode='w', newline='', encoding='utf-8') as file:
                 writer = csv.writer(file)
                 writer.writerow(headers)
 
         # Define rows for CSV file
-        rows = [list(card_info.values())]
+        rows = [list(data_draft.values())]
 
         # Append data to CSV file
-        with open('card_info.csv', mode='a', newline='', encoding='utf-8') as file:
+        with open('data_draft.csv', mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
             writer.writerows(rows)
 
