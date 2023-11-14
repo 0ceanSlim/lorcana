@@ -31,6 +31,6 @@ python getData
 - This retrieves all the card data from lorcania.com
 
 ```bash
-python getData
+python saveImages
 ``` 
 - This saves all the images specified in the data.csv to a local folder
